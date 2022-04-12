@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Amostragem.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      charset="utf-8"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <title>SLI</title>
+  </head>
+  <body>
+    <!--===================== MENU ========================-->
+    <nav class="menu">
+      <section class="menu_container">
+        <h1 class="menu_logo">SLI.</h1>
+
+        <ul class="menu_links">
+          <li class="menu_item">
+            <a href="index.html" class="menu_link">Home</a>
+          </li>
+
+          <li class="menu_item menu_item--show">
+            <a href="#" class="menu_link"
+              >Frios <img src="aeeow.svg" class="menu_arrow"
+            /></a>
+            <ul class="menu_nesting">
+              <li class="menu_inside">
+                <a href="AvariaF.html" class="menu_link menu_link--inside"
+                  >Avaria</a
+                >
+              </li>
+              <li class="menu_inside">
+                <a href="DescarteF.html" class="menu_link menu_link--inside"
+                  >Descarte</a
+                >
+              </li>
+              <li class="menu_inside">
+                <a href="#" class="menu_link menu_link--inside">Amostragem</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu_item menu_item--show">
+            <a href="#" class="menu_link"
+              >Mercearia <img src="aeeow.svg" class="menu_arrow"
+            /></a>
+            <ul class="menu_nesting">
+              <li class="menu_inside">
+                <a href="AvariaM.html" class="menu_link menu_link--inside"
+                  >Avaria</a
+                >
+              </li>
+              <li class="menu_inside">
+                <a href="DescarteM.html" class="menu_link menu_link--inside"
+                  >Descarte</a
+                >
+              </li>
+              <li class="menu_inside">
+                <a href="#" class="menu_link menu_link--inside">Qualidade</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu_item">
+            <a href="" class="menu_link">Sair <img src="loginS.svg" /> </a>
+          </li>
+        </ul>
+
+        <div class="menu_hamburguer">
+          <img src="menu.svg" class="menu_img" />
+        </div>
+      </section>
+    </nav>
+    <!--=================== FORMULARIO ===================-->
+    <div class="container-form">
+      <div class="title">
+        RECEPÇÃO PERECÍVEL CD911 PAULISTA <i class="fas fa-snowflake"></i>
+      </div>
+      <p>CADASTRO & ATUALIZAÇÃO DA EMBALAGEM - R.F</p>
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Marícula</span>
+            <input type="text" name="matricula" required />
+          </div>
+
+          <div class="gender-details">
+            <input type="radio" name="turno" id="dot-1" />
+            <input type="radio" name="turno" id="dot-2" />
+            <input type="radio" name="turno" id="dot-3" />
+            <span class="details">Turno :</span>
+            <div class="category">
+              <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="gender">1º Turno</span>
+              </label>
+
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="gender">2º Turno</span>
+              </label>
+
+              <label for="dot-3">
+                <span class="dot three"></span>
+                <span class="gender">3º Turno</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <span class="details">PLU</span>
+            <input type="text" name="plu" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Descrição</span>
+            <input type="text" name="descricao" required />
+          </div>
+
+          <div class="gender-details">
+            <input type="radio" name="tipo_cadastro" id="dot-4" />
+            <input type="radio" name="tipo_cadastro" id="dot-5" />
+            <span class="details">Tipo de Cadastro :</span>
+            <div class="category">
+              <label for="dot-4">
+                <span class="dot four"></span>
+                <span class="gender">Novo Cadastro</span>
+              </label>
+
+              <label for="dot-5">
+                <span class="dot five"></span>
+                <span class="gender">Atualização da EMB.</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Fornecedor</span>
+            <input type="text" name="fornecedor" required />
+          </div>
+
+          <div class="gender-details">
+            <input type="radio" name="tipo_armazenagem" id="dot-6" />
+            <input type="radio" name="tipo_armazenagem" id="dot-7" />
+            <input type="radio" name="tipo_armazenagem" id="dot-8" />
+            <span class="details">Tipo de Armazenagem :</span>
+            <div class="category">
+              <label for="dot-6">
+                <span class="dot six"></span>
+                <span class="gender">Resfiados</span>
+              </label>
+
+              <label for="dot-7">
+                <span class="dot seven"></span>
+                <span class="gender">Defumados</span>
+              </label>
+
+              <label for="dot-8">
+                <span class="dot eight"></span>
+                <span class="gender">Congelados</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="gender-details">
+            <input type="radio" name="tratamento_produto" id="dot-9" />
+            <input type="radio" name="tratamento_produto" id="dot-10" />
+            <input type="radio" name="tratamento_produto" id="dot-11" />
+            <span class="details">Tratamento do Produto :</span>
+            <div class="category">
+              <label for="dot-9">
+                <span class="dot nine"></span>
+                <span class="gender">V.P</span>
+              </label>
+
+              <label for="dot-10">
+                <span class="dot ten"></span>
+                <span class="gender">Variavel</span>
+              </label>
+
+              <label for="dot-11">
+                <span class="dot eleven"></span>
+                <span class="gender">Padrão</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Peso Total Líquido do Produto</span>
+            <input type="text" name="peso-liquido" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Peso Total da EMB. Primária</span>
+            <input type="text" name="peso-primaria" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Peso Total da EMB. Secundária</span>
+            <input type="text" name="peso-secundaria" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Peso Total da Tara (Pri.)+(Secun.)</span>
+            <input type="text" name="pri-sec" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Peso Bruto da Caixa</span>
+            <input type="text" name="peso-bruto-caixa" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Lastro - Kg</span>
+            <input type="text" name="lastro-kg" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Altura - Kg</span>
+            <input type="text" name="altura-kg" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Lastro - Cx</span>
+            <input type="text" name="lastro-cx" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Altura - Cx</span>
+            <input type="text" name="altura-cx" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Data de Fabricação</span>
+            <input type="date" name="data-fabricacao" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Data de Validade</span>
+            <input type="date" name="data-validade" required />
+          </div>
+
+          <span class="title-1">EMBALAGEM SECUNDARIA - CX</span>
+
+          <div class="input-box">
+            <span class="details">Altura EMB. (Cm)</span>
+            <input type="text" name="altura-cm" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Largura (Cm)</span>
+            <input type="text" name="largura-cm" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Profundidade (Cm)</span>
+            <input type="text" name="profundidade-cm" required />
+          </div>
+
+          <span class="title-1">EMBALAGEM PRIMARIA - UNIDADE</span>
+
+          <div class="input-box">
+            <span class="details">Altura EMB. (Cm)</span>
+            <input type="text" name="altura-cm-sec" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Largura (Cm)</span>
+            <input type="text" name="largura-cm-sec" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Profundidade (Cm)</span>
+            <input type="text" name="profundidade-cm-sec" required />
+          </div>
+
+          <h2>PESO VARIAVEL</h2>
+          <p>INFORME AS TARAS :</p>
+
+          <div class="input-box">
+            <span class="details">01º</span>
+            <input type="text" name="tara-01" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">02º</span>
+            <input type="text" name="tara-02" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">03º</span>
+            <input type="text" name="tara-03" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Média Tara</span>
+            <input type="text" name="media-tara" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Stretch</span>
+            <input type="text" name="stretch" required />
+          </div>
+
+          <p class="text-title">PRIMEIRA AMOSTRAGEM</p>
+
+          <div class="input-box">
+            <span class="details">Peso Bruto</span>
+            <input type="text" name="peso-bruto-1" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Peso liquido</span>
+            <input type="text" name="peso-liquido-1" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">QTD. UNI.</span>
+            <input type="text" name="qtd-uni-1" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">EMB. Primaria</span>
+            <input type="text" name="emb-pri-1" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">EMB. Secundaria</span>
+            <input type="text" name="emb-sec-1" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Tara</span>
+            <input type="text" name="tara-1" required />
+          </div>
+
+          <p class="text-title">SEGUNDA AMOSTRAGEM</p>
+
+          <div class="input-box">
+            <span class="details">Peso Bruto</span>
+            <input type="text" name="peso-bruto-2" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Peso liquido</span>
+            <input type="text" name="peso-liquido-2" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">QTD. UNI.</span>
+            <input type="text" name="qtd-uni-2" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">EMB. Primaria</span>
+            <input type="text" name="emb-pri-2" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">EMB. Secundaria</span>
+            <input type="text" name="emb-sec-2" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Tara</span>
+            <input type="text" name="tara-2" required />
+          </div>
+
+          <p class="text-title">TERCEIRA AMOSTRAGEM</p>
+
+          <div class="input-box">
+            <span class="details">Peso Bruto</span>
+            <input type="text" name="peso-bruto-3" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Peso liquido</span>
+            <input type="text" name="peso-liquido-3" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">QTD. UNI.</span>
+            <input type="text" name="qtd-uni-3" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">EMB. Primaria</span>
+            <input type="text" name="emb-pri-3" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">EMB. Secundaria</span>
+            <input type="text" name="emb-sec-3" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Tara</span>
+            <input type="text" name="tara-3" required />
+          </div>
+
+          <p class="text-title">MEDIA</p>
+
+          <div class="input-box">
+            <span class="details">Peso Bruto</span>
+            <input type="text" name="peso-bruto-m" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Peso liquido</span>
+            <input type="text" name="peso-liquido-m" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">QTD. UNI.</span>
+            <input type="text" name="qtd-uni-m" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">EMB. Primaria</span>
+            <input type="text" name="emb-pri-m" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">EMB. Secundaria</span>
+            <input type="text" name="emb-sec-m" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Tara</span>
+            <input type="text" name="tara-m" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Observações</span>
+            <textarea name="obs" id="obs" cols="54" rows="5"></textarea>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Salvar" id="btn" />
+        </div>
+      </form>
+    </div>
+    <!--===================== FOOTER =========-->
+
+    <script src="app.js"></script>
+  </body>
+</html>

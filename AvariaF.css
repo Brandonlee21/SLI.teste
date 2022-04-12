@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@300;400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #d2d3d6;
+}
+.change a {
+  font-size: 20px;
+  cursor: pointer;
+  color: red;
+}
+.assai {
+  margin-bottom: -180px;
+  margin-left: 1000px;
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+  clip-path: circle();
+}
+h1 {
+  margin-top: 10px;
+  font-size: 40px;
+}
+
+.menu {
+  background-color: #1a202c;
+  color: #fff;
+  height: 70px;
+}
+
+.menu_container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+.menu_links {
+  border-radius: 5px;
+  height: 100%;
+  transition: transform 0.5s;
+  display: flex;
+}
+.menu_item {
+  list-style: none;
+  position: relative;
+  height: 100%;
+
+  --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+  --transform: rotate(-90deg);
+}
+/*================= FAZER A SETA SE MOVER===================*/
+.menu_item:hover {
+  --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  --transform: rotate(0);
+}
+.menu_arrow {
+  transform: var(--transform);
+  transition: transform 0.3s;
+  display: block;
+  margin-left: 3px;
+}
+/*====== FIM SETA======*/
+
+/*====== MENU CENTRAL =====*/
+.menu_link {
+  color: #fff;
+
+  text-decoration: none;
+  padding: 0 30px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.menu_link:hover {
+  background-color: #7c92bd;
+}
+/*====== FIM MENU======*/
+.menu_nesting {
+  list-style: none;
+  transition: clip-path 0.3s;
+  clip-path: var(--clip);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: max-content;
+  transform: translateY(100%);
+  background-color: #000;
+  color: #fff;
+}
+.menu_link--inside {
+  padding: 30px 65px 20px 20px;
+}
+.menu_link--inside {
+  background-color: #1a202c;
+}
+
+/*====== MENU RESPONSIVO ======*/
+.menu_hamburguer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  cursor: pointer;
+  display: none;
+}
+.menu_img {
+  display: block;
+  width: 36px;
+}
+
+/*============== FORM PRINCIPAL =================*/
+.container {
+  max-width: 1000px;
+  width: 100vw;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  margin-left: 270px;
+  margin-top: 150px;
+}
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: flex;
+}
+
+.title i {
+  color: rgb(49, 215, 245);
+}
+.container form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 3 - 20px);
+}
+.user-details .input-box .details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+textarea {
+  width: 30vw;
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 25px 20px;
+  border-color: #000;
+  text-align: left;
+}
+.user-details textarea:valid {
+  border-color: #7c92bd;
+}
+.user-details .input-box input {
+  height: 40px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgb(49, 48, 48);
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.2s ease;
+}
+.user-details .box-1 input {
+  height: 60px;
+  width: 150%;
+}
+.user-details .box-2 input {
+  width: 40%;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: #7c92bd;
+}
+form .gender-details .gender-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+form .gender-details .category {
+  display: flex;
+  width: 80%;
+  margin: 16px;
+  justify-content: space-between;
+}
+.gender-details .category label {
+  display: flex;
+  align-items: center;
+}
+.gender-details .category .dot {
+  height: 18px;
+  width: 18px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category .one,
+#dot-2:checked ~ .category .two,
+#dot-3:checked ~ .category .three,
+#dot-4:checked ~ .category .four,
+#dot-5:checked ~ .category .five {
+  border-color: #d9d9d9;
+  background: #7c92bd;
+}
+form input[type='radio'] {
+  display: none;
+}
+form .button {
+  height: 45px;
+  margin: 45px 0;
+}
+form .button input {
+  cursor: pointer;
+  height: 100%;
+  width: 40%;
+  margin-left: 280px;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, rgb(243, 103, 22), rgb(245, 149, 24));
+}
+form .button input:hover {
+  background: linear-gradient(-135deg, rgb(243, 103, 22), rgb(245, 149, 24));
+}
+
+@media (max-width: 800px) {
+  .menu_hamburguer {
+    display: flex;
+  }
+  .menu_item {
+    --clip: 0;
+    overflow: hidden;
+  }
+  .menu_item--active {
+    --transform: rotate(0);
+    --background: #5ei7094;
+  }
+  .menu_item--show {
+    background-color: var(--background);
+  }
+  .menu_links {
+    position: fixed;
+    max-width: 400px;
+    width: 100%;
+    top: 70px;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    overflow-y: auto;
+    display: grid;
+    grid-auto-rows: max-content;
+    transform: translateX(100%);
+  }
+  .menu_links--show {
+    transform: unset;
+    width: 100%;
+  }
+  .menu_link {
+    padding: 25px 0;
+    padding-left: 30px;
+    display: flex;
+    height: auto;
+    background: #000;
+  }
+  .menu_arrow {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .menu_nesting {
+    display: grid;
+    position: unset;
+    width: 100%;
+    transform: translateY(0);
+    height: 0;
+    transition: height 0.3s;
+  }
+  .menu_link--inside {
+    width: 90%;
+    margin-left: auto;
+    border-left: 1px solid #798499;
+  }
+
+  .assai {
+    display: none;
+  }
+}
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+    width: 100vw;
+    margin: 0;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .gender-details .category {
+    width: 100%;
+    display: block;
+  }
+  .container form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar {
+    width: 0;
+  }
+  form .button {
+    margin-left:  -12rem;
+    width: 100vw;
+  }
+  textarea {
+    width: 87vw;
+  }
+}

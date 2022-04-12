@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="AvariaM.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      charset="utf-8"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>SLI</title>
+  </head>
+  <body>
+    <!--===================== MENU ========================-->
+    <nav class="menu">
+      <section class="menu_container">
+        <h1 class="menu_logo">SLI.</h1>
+
+        <ul class="menu_links">
+          <li class="menu_item">
+            <a href="index.html" class="menu_link">Home</a>
+          </li>
+
+          <li class="menu_item menu_item--show">
+            <a href="#" class="menu_link"
+              >Frios <img src="aeeow.svg" class="menu_arrow"
+            /></a>
+            <ul class="menu_nesting">
+              <li class="menu_inside">
+                <a href="AvariaF.html" class="menu_link menu_link--inside">Avaria</a>
+              </li>
+              <li class="menu_inside">
+                <a href="DescarteF.html" class="menu_link menu_link--inside">Descarte</a>
+              </li>
+              <li class="menu_inside">
+                <a href="Amostragem.html" class="menu_link menu_link--inside">Amostragem</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu_item menu_item--show">
+            <a href="#" class="menu_link"
+              >Mercearia <img src="aeeow.svg" class="menu_arrow"
+            /></a>
+            <ul class="menu_nesting">
+              <li class="menu_inside">
+                <a href="#" class="menu_link menu_link--inside">Avaria</a>
+              </li>
+              <li class="menu_inside">
+                <a href="DescarteM.html" class="menu_link menu_link--inside">Descarte</a>
+              </li>
+              <li class="menu_inside">
+                <a href="Qualidade.html" class="menu_link menu_link--inside">Qualidade</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu_item">
+            <a href="" class="menu_link"
+              >Sair <img src="loginS.svg" />
+            </a>
+          </li>
+        </ul>
+
+        <div class="menu_hamburguer">
+          <img src="menu.svg" class="menu_img" />
+        </div>
+      </section>
+    </nav>
+    <!--=================== FORMULARIO ===================-->
+    <div class="container">
+      <div class="title">Avaria Mercearia <i class="fas fa-cubes"></i></div>
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Marícula</span>
+            <input type="text" name="matricula" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">PLU</span>
+            <input type="text" name="plu" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Descrição</span>
+            <input type="text" name="descricao" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Emb. Compra</span>
+            <input type="text" name="embC" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Quantidade</span>
+            <input type="text" name="qtd" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Data de Entrada</span>
+            <input type="date" name="data" required />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Observações</span>
+            <textarea type="text" name="obs"></textarea>
+          </div>
+        </div>
+
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1" />
+          <input type="radio" name="gender" id="dot-2" />
+          <input type="radio" name="gender" id="dot-3" />
+          <input type="radio" name="gender" id="dot-4" />
+          <input type="radio" name="gender" id="dot-5" />
+          <span class="gender-title">Motivos</span>
+          <div class="category">
+            <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="gender">Operacional</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span class="gender">Expedição</span>
+            </label>
+            <label for="dot-3">
+              <span class="dot three"></span>
+              <span class="gender">Recebimento</span>
+            </label>
+            <label for="dot-4">
+              <span class="dot four"></span>
+              <span class="gender">Qualidade</span>
+            </label>
+            <label for="dot-5">
+              <span class="dot five"></span>
+              <span class="gender">Degustação</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Salvar" id="btn" />
+        </div>
+      
+      </form>
+    
+    
+    <script src="app.js"></script>
+  </body>
+</html>
